@@ -4,12 +4,20 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [counter, setCounter] = useState(0)
 
   return (
     <>
       <div>
-        <h1>Hi</h1>
+        Counter {counter}
+        <br />
+        <button onClick={() => {
+          setCounter(counter + 1)
+        }}>INCREASE</button>
+        
+        <button onClick={() => {
+          setCounter(counter - 1)
+        }}>DECREASE</button>
       </div>
     </>
   )
